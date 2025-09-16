@@ -47,7 +47,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="../../public/icons/instagram.svg" alt="Instagram" />
+              <img src="icons/instagram.svg" alt="Instagram" />
             </a>
             <a
               href="https://wa.me/5599999999999"
