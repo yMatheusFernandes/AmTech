@@ -1,0 +1,46 @@
+/* Estilo base do botão */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  text-decoration: none; /* para quando for usado como link */
+  min-width: 160px;
+}
+
+/* Variante Primary */
+.btn.primary {
+  background: #003BA5;
+  color: #FFFFFF;
+}
+.btn.primary:hover {
+  background: #002D7A;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.25);
+}
+
+/* Variante Dark */
+.btn.dark {
+  background: #000000;
+  color: #FFFFFF;
+}
+.btn.dark:hover {
+  background: #222222;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.25);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 0.95rem;
+  }
+}
