@@ -1,4 +1,3 @@
-import React from "react";
 import "./../css/App.css";
 import "./../css/Novo.css"
 
@@ -105,14 +104,74 @@ export default function Novo() {
               <td>🟣 🔴 🟡</td>
               <td>Disponível</td>
             </tr>
+            <tr>
+              <td>iPhone 12 pro max</td>
+              <td>128 GB</td>
+              <td>R$ 5.499</td>
+              <td>🟣 🔴 🟡</td>
+              <td>Disponível</td>
+            </tr>
+            <tr>
+              <td>iPhone 12 pro</td>
+              <td>128 GB</td>
+              <td>R$ 5.499</td>
+              <td>🟣 🔴 🟡</td>
+              <td>Disponível</td>
+            </tr>
+            <tr>
+              <td>iPhone 12</td>
+              <td>128 GB</td>
+              <td>R$ 5.499</td>
+              <td>🟣 🔴 🟡</td>
+              <td>Disponível</td>
+            </tr>
+            <tr>
+              <td>iPhone 11 pro max</td>
+              <td>128 GB</td>
+              <td>R$ 5.499</td>
+              <td>🟣 🔴 🟡</td>
+              <td>Disponível</td>
+            </tr>
+            <tr>
+              <td>iPhone 11 pro</td>
+              <td>128 GB</td>
+              <td>R$ 5.499</td>
+              <td>🟣 🔴 🟡</td>
+              <td>Disponível</td>
+            </tr>
+            <tr>
+              <td>iPhone 11</td>
+              <td>128 GB</td>
+              <td>R$ 5.499</td>
+              <td>🟣 🔴 🟡</td>
+              <td>Disponível</td>
+            </tr>
+            <tr>
+              <td>iPhone xr</td>
+              <td>128 GB</td>
+              <td>R$ 5.499</td>
+              <td>🟣 🔴 🟡</td>
+              <td>Disponível</td>
+            </tr>
+            <tr>
+              <td>iPhone 8 plus</td>
+              <td>128 GB</td>
+              <td>R$ 5.499</td>
+              <td>🟣 🔴 🟡</td>
+              <td>Disponível</td>
+            </tr>
+            <tr>
+              <td>iPhone 7 plus</td>
+              <td>128 GB</td>
+              <td>R$ 5.499</td>
+              <td>🟣 🔴 🟡</td>
+              <td>Disponível</td>
+            </tr>
             
           </tbody>
         </table>
       </main>
 
-      <footer className="footer">
-        <p>&copy; 2025 Am Tech - Todos os direitos reservados</p>
-      </footer>
     </div>
   );
 }

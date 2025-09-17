@@ -1,4 +1,7 @@
 /* Estilo base do botão */
+
+@charset "UTF-8";
+
 .btn {
   display: inline-block;
   padding: 14px 28px;

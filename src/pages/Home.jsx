@@ -1,6 +1,8 @@
 // src/pages/Home.jsx
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
+import Footer from "../components/Footer"
 import "../css/App.css";
 import logo from "../images/logo.png";
 
@@ -30,39 +32,10 @@ export default function Home() {
           </Button>
         </div>
       </main>
-
-      <footer className="footer">
-        <div className="footer-content">
-          <p>&copy; 2025 Am Tech — Todos os direitos reservados</p>
-
-          <nav className="footer-links">
-            <a href="/sobre">Sobre</a>
-            <a href="/contato">Contato</a>
-            <a href="/politica">Política de Privacidade</a>
-          </nav>
-
-          <div className="footer-social">
-            <a
-              href="https://instagram.com/amtech_piripiri"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="icons/instagram.svg" alt="Instagram" />
-            </a>
-            <a
-              href="https://wa.me/5599999999999"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="../../../public/icons/WhatApp.webp" alt="WhatsApp" />
-            </a>
-          </div>
-        </div>
-
-        <div className="footer-address">
-          <p>📍 Rua Freitas Júnior, 619 Centro, Piripiri - PI</p>
-        </div>
-      </footer>
+      
+    <Footer>
+    </Footer>
+      
     </div>
   );
 }
