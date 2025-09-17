@@ -1,13 +1,10 @@
 // src/pages/Home.jsx
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import Button from "../components/Button";
+import Main from "../components/Main"
 import Footer from "../components/Footer"
-import "../css/App.css";
 import logo from "../images/logo.png";
+import "../css/App.css";
 
 export default function Home() {
-  const navigate = useNavigate();
 
   return (
     <div className="app">
@@ -21,17 +18,9 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="main">
-        <h2>Escolha sua categoria</h2>
-        <div className="button-group">
-          <Button variant="primary" onClick={() => navigate("/Seminovo")}>
-            iPhone Novo
-          </Button>
-          <Button variant="dark" onClick={() => navigate("/Novo")}>
-            iPhone Seminovo
-          </Button>
-        </div>
-      </main>
+    <Main>
+    </Main>
+      
       
     <Footer>
     </Footer>

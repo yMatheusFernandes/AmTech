@@ -1,6 +1,3 @@
-import React from "react";
-import "../css/Button.css";
-
 export default function Button({ children, variant = "primary", href, onClick }) {
   const className = `btn ${variant}`;
 

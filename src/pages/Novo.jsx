@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ShoppingCart, Star, Check, Smartphone, Battery, Camera, Cpu } from 'lucide-react';
-import "./../css/Novo2.css";
 
 const IphoneStore = () => {
   const [selectedColors, setSelectedColors] = useState({});
