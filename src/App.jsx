@@ -9,8 +9,8 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/novo" element={<SemiNovo />} />
-      <Route path="/seminovo" element={<Novo />} />
+      <Route path="/novo" element={<Novo />} />
+      <Route path="/seminovo" element={<SemiNovo />} />
     </Routes>
   );
 }
