@@ -44,7 +44,7 @@ const IphoneStore = () => {
         "1TB": { preco: 5000.0, precoAntigo: 5200.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone15pro.webp",
+      imagem: "/public/images/iphones/iphone15pro.webp",
       cores: ["#ffffffff", "#F5F5F0", "#000000ff", "#394C6B"],
       nomesCores: [
         "Titânio Branco",
