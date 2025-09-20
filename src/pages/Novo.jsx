@@ -1,23 +1,19 @@
 import React, { useState } from "react";
-import {
-  ShoppingCart,
-  Star,
-  Check,
-  Smartphone,
-  Battery,
-  Camera,
-  Cpu,
-} from "lucide-react";
+import { ShoppingCart, Smartphone, Battery, Camera, Cpu } from "lucide-react";
 
 const IphoneStore = () => {
   const [selectedColors, setSelectedColors] = useState({});
+  const [selectedStorages, setSelectedStorages] = useState({});
 
   const iphones = [
     {
       id: 1,
       modelo: "iPhone 15 Pro Max",
-      preco: 9999.0,
-      precoAntigo: 10999.0,
+      precos: {
+        "256GB": { preco: 9999.0, precoAntigo: 10999.0 },
+        "512GB": { preco: 11299.0, precoAntigo: 12599.0 },
+        "1TB": { preco: 13099.0, precoAntigo: 14599.0 },
+      },
       parcelas: 18,
       imagem:
         "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400",
@@ -44,10 +40,8 @@ const IphoneStore = () => {
       precos: {
         "256GB": { preco: 9999.0, precoAntigo: 10999.0 },
         "512GB": { preco: 11299.0, precoAntigo: 12599.0 },
-        "1TB": { preco: 13099.0, precoAntigo: 14599.0 }
+        "1TB": { preco: 13099.0, precoAntigo: 14599.0 },
       },
-      preco: 8499.0,
-      precoAntigo: 9299.0,
       parcelas: 18,
       imagem:
         "https://images.unsplash.com/photo-1696446701796-da61225697cc?w=400",
@@ -64,14 +58,17 @@ const IphoneStore = () => {
         chip: "A17 Pro",
         camera: "48MP + 12MP + 12MP",
         bateria: "23h de vídeo",
-        armazenamento: ["128GB", "256GB", "512GB", "1TB"],
+        armazenamento: ["256GB", "512GB", "1TB"],
       },
     },
     {
       id: 3,
       modelo: "iPhone 15",
-      preco: 6299.0,
-      precoAntigo: 7199.0,
+      precos: {
+        "256GB": { preco: 9999.0, precoAntigo: 10999.0 },
+        "512GB": { preco: 11299.0, precoAntigo: 12599.0 },
+        "1TB": { preco: 13099.0, precoAntigo: 14599.0 },
+      },
       parcelas: 18,
       imagem:
         "https://images.unsplash.com/photo-1695729626008-7adb521f15be?w=400",
@@ -82,14 +79,17 @@ const IphoneStore = () => {
         chip: "A16 Bionic",
         camera: "48MP + 12MP",
         bateria: "20h de vídeo",
-        armazenamento: ["128GB", "256GB", "512GB"],
+        armazenamento: ["256GB", "512GB", "1TB"],
       },
     },
     {
       id: 4,
       modelo: "iPhone 14",
-      preco: 5299.0,
-      precoAntigo: 6499.0,
+      precos: {
+        "256GB": { preco: 9999.0, precoAntigo: 10999.0 },
+        "512GB": { preco: 11299.0, precoAntigo: 12599.0 },
+        "1TB": { preco: 13099.0, precoAntigo: 14599.0 },
+      },
       parcelas: 18,
       imagem:
         "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=400",
@@ -101,14 +101,17 @@ const IphoneStore = () => {
         chip: "A15 Bionic",
         camera: "12MP + 12MP",
         bateria: "20h de vídeo",
-        armazenamento: ["128GB", "256GB", "512GB"],
+        armazenamento: ["256GB", "512GB", "1TB"],
       },
     },
     {
       id: 5,
       modelo: "iPhone 14 Plus",
-      preco: 6799.0,
-      precoAntigo: 7999.0,
+      precos: {
+        "128GB": { preco: 9999.0, precoAntigo: 10999.0 },
+        "256GB": { preco: 11299.0, precoAntigo: 12599.0 },
+        "512GB": { preco: 13099.0, precoAntigo: 14599.0 },
+      },
       parcelas: 18,
       imagem:
         "https://images.unsplash.com/photo-1678911820864-e2c567c655d7?w=400",
@@ -133,8 +136,11 @@ const IphoneStore = () => {
     {
       id: 6,
       modelo: "iPhone 13",
-      preco: 4299.0,
-      precoAntigo: 5499.0,
+      precos: {
+        "128GB": { preco: 9999.0, precoAntigo: 10999.0 },
+        "256GB": { preco: 11299.0, precoAntigo: 12599.0 },
+        "512GB": { preco: 13099.0, precoAntigo: 14599.0 },
+      },
       parcelas: 18,
       imagem:
         "https://images.unsplash.com/photo-1640437830863-8f7f38327319?w=400",
@@ -158,22 +164,23 @@ const IphoneStore = () => {
     }));
   };
 
-  const formatPrice = (price) => {
-    return price.toLocaleString("pt-BR", {
-      style: "currency",
-      currency: "BRL",
-    });
+  const handleStorageSelect = (phoneId, storage) => {
+    setSelectedStorages((prev) => ({
+      ...prev,
+      [phoneId]: storage,
+    }));
   };
+
+  const formatPrice = (price) =>
+    price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
   return (
     <div className="min-h-screen bg-[#000000] p-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-            <span>
-              iPhones novos <br />
-              sob pedido e a pronta entrega
-            </span>
+            iPhones novos <br />
+            sob pedido e a pronta entrega
           </h1>
           <p className="text-gray-300 text-lg">
             Os melhores iPhones com condições especiais
@@ -183,6 +190,16 @@ const IphoneStore = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {iphones.map((iphone) => {
             const selectedColorIndex = selectedColors[iphone.id] || 0;
+            const selectedStorage =
+              selectedStorages[iphone.id] ||
+              iphone.especificacoes.armazenamento[0];
+
+            // Preços dinâmicos
+            const precoAtual =
+              iphone.precos?.[selectedStorage]?.preco || iphone.preco;
+            const precoAntigoAtual =
+              iphone.precos?.[selectedStorage]?.precoAntigo ||
+              iphone.precoAntigo;
 
             return (
               <div
@@ -201,19 +218,12 @@ const IphoneStore = () => {
                   </div>
                 )}
 
-                {iphone.desconto && (
-                  <div className="absolute top-14 right-4 z-10 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg">
-                    -{iphone.desconto}%
-                  </div>
-                )}
-
                 <div className="relative h-64 bg-gradient-to-br from-gray-700/30 to-gray-800/30 p-6">
                   <img
                     src={iphone.imagem}
                     alt={iphone.modelo}
                     className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
 
                 <div className="p-6">
@@ -221,6 +231,7 @@ const IphoneStore = () => {
                     {iphone.modelo}
                   </h3>
 
+                  {/* Seleção de cores */}
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-2">
                       Cores disponíveis:
@@ -240,74 +251,58 @@ const IphoneStore = () => {
                         />
                       ))}
                     </div>
-                    {selectedColorIndex !== undefined && (
-                      <p className="text-xs text-[#ffc700] mt-2">
-                        {iphone.nomesCores[selectedColorIndex]}
-                      </p>
-                    )}
+                    <p className="text-xs text-[#ffc700] mt-2">
+                      {iphone.nomesCores[selectedColorIndex]}
+                    </p>
                   </div>
 
-                  <div className="space-y-3 mb-4 border-t border-gray-700 pt-4">
-                    <div className="flex items-center gap-2 text-gray-300">
-                      <Smartphone size={16} className="text-[#ffc700]" />
-                      <span className="text-sm">
-                        {iphone.especificacoes.tela}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-gray-300">
-                      <Cpu size={16} className="text-blue-400" />
-                      <span className="text-sm">
-                        {iphone.especificacoes.chip}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-gray-300">
-                      <Camera size={16} className="text-pink-400" />
-                      <span className="text-sm">
-                        {iphone.especificacoes.camera}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-gray-300">
-                      <Battery size={16} className="text-green-400" />
-                      <span className="text-sm">
-                        {iphone.especificacoes.bateria}
-                      </span>
-                    </div>
-                  </div>
-
+                  {/* Seleção de armazenamento */}
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-2">Armazenamento:</p>
                     <div className="flex gap-2 flex-wrap">
                       {iphone.especificacoes.armazenamento.map((storage) => (
                         <span
                           key={storage}
-                          className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-lg text-sm border border-gray-600 hover:border-[#ffc700] hover:text-[#ffc700] transition-colors cursor-pointer"
+                          onClick={() =>
+                            handleStorageSelect(iphone.id, storage)
+                          }
+                          className={`px-3 py-1 rounded-lg text-sm border cursor-pointer transition-colors ${
+                            selectedStorage === storage
+                              ? "bg-[#ffc700] text-black border-[#ffc700]"
+                              : "bg-gray-700/50 text-gray-300 border-gray-600 hover:border-[#ffc700] hover:text-[#ffc700]"
+                          }`}
                         >
                           {storage}
                         </span>
                       ))}
                     </div>
+                    <p className="text-xs text-[#ffc700] mt-2">
+                      Selecionado: {selectedStorage}
+                    </p>
                   </div>
 
+                  {/* Preço */}
                   <div className="mb-6">
-                    {iphone.precoAntigo && (
+                    {precoAntigoAtual && (
                       <p className="text-gray-500 line-through text-sm">
-                        {formatPrice(iphone.precoAntigo)}
+                        {formatPrice(precoAntigoAtual)}
                       </p>
                     )}
                     <p className="text-3xl font-bold text-white">
-                      {formatPrice(iphone.preco)}
+                      {formatPrice(precoAtual)}
                     </p>
                     <p className="text-sm text-gray-400">
                       em até {iphone.parcelas}x de{" "}
-                      {formatPrice(iphone.preco / iphone.parcelas)}
+                      {formatPrice(precoAtual / iphone.parcelas)}
                     </p>
                   </div>
 
+                  {/* Botão WhatsApp */}
                   <a
                     href="https://wa.me/5586981634623"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full bg-[#003ba5] hover:bg-[#002a79] text-white font-semibold py-3 px-6 rounded-xl hover:from-[#002a79] hover:to-[#002a79] transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg hover:shadow-[#002a79]"
+                    className="w-full bg-[#003ba5] hover:bg-[#002a79] text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg hover:shadow-[#002a79]"
                   >
                     <ShoppingCart
                       size={20}
