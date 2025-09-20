@@ -40,6 +40,8 @@ const IphoneStore = () => {
         "Titânio Preto",
         "Titânio Azul",
       ],
+      destaque: true,
+      novo: true,
       especificacoes: {
         tela: '6.7" Super Retina XDR',
         chip: "A17 Pro",
@@ -66,6 +68,7 @@ const IphoneStore = () => {
         "Titânio Preto",
         "Titânio Azul",
       ],
+      novo: true,
       especificacoes: {
         tela: '6.1" Super Retina XDR',
         chip: "A17 Pro",
@@ -241,7 +244,7 @@ const IphoneStore = () => {
         armazenamento: ["128GB"],
       },
     },
-    {
+       {
       id: 12,
       modelo: "iPhone 12",
       precos: {
@@ -250,17 +253,17 @@ const IphoneStore = () => {
       },
       parcelas: 18,
       imagem: iphone12,
-      cores: ["#ffffff", "#1a1a1a", "#C9E7D4", "#FA3C4E", "#D4E4FA"],
-      nomesCores: ["Branco", "Preto", "Verde", "Vermelho", "Azul"],
+      cores: ["#ffffff", "#1a1a1a", "#C9E7D4","#FA3C4E","#D4E4FA"],
+      nomesCores: ["Branco", "Preto", "Verde", "Vermelho","Azul"],
       especificacoes: {
         tela: '6.1" Super Retina XDR',
         chip: "A15 Bionic",
         camera: "12MP + 12MP",
         bateria: "20h de vídeo",
-        armazenamento: ["64GB", "128GB"],
+        armazenamento: ["64GB","128GB"],
       },
     },
-    {
+       {
       id: 13,
       modelo: "iPhone 11 pro max",
       precos: {
@@ -269,7 +272,7 @@ const IphoneStore = () => {
       parcelas: 18,
       imagem: iphone11promax,
       cores: ["#1a1a1a"],
-      nomesCores: ["Preto"],
+      nomesCores: [ "Preto"],
       especificacoes: {
         tela: '6.1" Super Retina XDR',
         chip: "A15 Bionic",
@@ -278,26 +281,26 @@ const IphoneStore = () => {
         armazenamento: ["64GB"],
       },
     },
-    {
+       {
       id: 14,
       modelo: "iPhone 11",
       precos: {
         "128GB": { preco: 1950.0, precoAntigo: 2100.0 },
-        "64GB": { preco: 1850.0, precoAntigo: 2000.0 },
+        "64GB": { preco: 1850.0, precoAntigo: 2000.0 }
       },
       parcelas: 18,
       imagem: iphone11,
-      cores: ["#ffffff", "#1a1a1a", "#5C5B77", "#C9E7D4"],
-      nomesCores: ["Branco", "Preto", "Roxo", "Verde"],
+      cores: ["#ffffff", "#1a1a1a","#5C5B77" ,"#C9E7D4", ],
+      nomesCores: ["Branco", "Preto", "Roxo", "Verde", ],
       especificacoes: {
         tela: '6.1" Super Retina XDR',
         chip: "A15 Bionic",
         camera: "12MP + 12MP",
         bateria: "20h de vídeo",
-        armazenamento: ["64GB", "128GB"],
+        armazenamento: ["64GB","128GB"],
       },
     },
-    {
+       {
       id: 15,
       modelo: "iPhone Xr",
       precos: {
@@ -305,8 +308,8 @@ const IphoneStore = () => {
       },
       parcelas: 18,
       imagem: iphonexr,
-      cores: ["#1a1a1a"],
-      nomesCores: ["Preto"],
+      cores: [ "#1a1a1a", ],
+      nomesCores: ["Preto", ],
       especificacoes: {
         tela: '6.1" Super Retina XDR',
         chip: "A15 Bionic",
@@ -314,6 +317,7 @@ const IphoneStore = () => {
         bateria: "20h de vídeo",
         armazenamento: ["128GB"],
       },
+ 
     },
   ];
 
@@ -339,14 +343,14 @@ const IphoneStore = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            iPhones SemiNovos
+            iPhones SemiNovos 
           </h1>
           <p className="text-gray-300 text-lg">
             Os melhores iPhones com condições especiais
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-8">
           {iphones.map((iphone) => {
             const selectedColorIndex = selectedColors[iphone.id] || 0;
             const selectedStorage =
@@ -360,12 +364,16 @@ const IphoneStore = () => {
             return (
               <div
                 key={iphone.id}
-                className="group relative flex flex-col sm:flex-row bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg rounded-3xl overflow-hidden border border-gray-700/50 hover:border-[#ffc700] transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#ffc700]/50"
+                className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg rounded-3xl overflow-hidden border border-gray-700/50 hover:border-[#ffc700] transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#ffc700]/50"
               >
-             
+                {iphone.novo && (
+                  <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-green-400 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                    NOVO
+                  </div>
+                )}
 
                 {/* Imagem */}
-                <div className="relative w-full sm:w-1/2 h-48 sm:h-auto bg-gradient-to-br from-[#ffffff] to-[#ffffff] p-6 flex items-center justify-center">
+                <div className="relative h-64 bg-gradient-to-br from-[#ffffff] to-[#ffffff] p-6">
                   <img
                     src={iphone.imagem}
                     alt={iphone.modelo}
@@ -390,7 +398,7 @@ const IphoneStore = () => {
                   </div>
                 </div>
 
-                <div className="p-4 sm:p-6 w-full sm:w-1/2">
+                <div className="p-4 md:p-6">
                   <h3 className="text-lg md:text-2xl font-bold text-white mb-2">
                     {iphone.modelo}
                   </h3>
