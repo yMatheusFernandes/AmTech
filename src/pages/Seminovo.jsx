@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import  IphoneSpecsPopup from "../components/popup"
+import IphoneSpecsPopup from "../components/popup";
+import iphone15pro from "../assets/iphone15pro.webp";
+
 import { ShoppingCart, Smartphone, Battery, Camera, Cpu } from "lucide-react";
 
 const IphoneStore = () => {
@@ -16,7 +18,7 @@ const IphoneStore = () => {
         "1TB": { preco: 5600.0, precoAntigo: 6000.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone15promax.webp",
+      imagem: "",
       cores: ["#ffffffff", "#F5F5F0", "#000000ff", "#394C6B"],
       nomesCores: [
         "Titânio Branco",
@@ -44,7 +46,7 @@ const IphoneStore = () => {
         "1TB": { preco: 5000.0, precoAntigo: 5200.0 },
       },
       parcelas: 18,
-      imagem: "/public/images/iphones/iphone15pro.webp",
+      imagem: iphone15pro,
       cores: ["#ffffffff", "#F5F5F0", "#000000ff", "#394C6B"],
       nomesCores: [
         "Titânio Branco",
@@ -69,7 +71,7 @@ const IphoneStore = () => {
         "256GB": { preco: 4080.0, precoAntigo: 4249.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone15.webp",
+      imagem: "",
       cores: ["#FFD3E1", "#1a1a1a", "#D4E4FA", "#C9E7D4"],
       nomesCores: ["Rosa", "Preto", "Azul", "Verde"],
       especificacoes: {
@@ -89,7 +91,7 @@ const IphoneStore = () => {
         "1TB": { preco: 4700.0, precoAntigo: 4900.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone14promax.webp",
+      imagem: "",
       cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
       nomesCores: ["Roxo", "Preto", "Gold"],
       especificacoes: {
@@ -108,7 +110,7 @@ const IphoneStore = () => {
         "256GB": { preco: 3950.0, precoAntigo: 4200.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone14pro.webp",
+      imagem: "",
       cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
       nomesCores: ["Roxo", "Preto", "Gold"],
       especificacoes: {
@@ -126,7 +128,7 @@ const IphoneStore = () => {
         "128GB": { preco: 2800.0, precoAntigo: 3100.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone14.webp",
+      imagem: "",
       cores: ["#FFFC9E", "#5C5B77", "#1a1a1a", "#6BB6FF", "#FA3C4E"],
       nomesCores: ["Amarelo ", "Lilás", "Preto", "Azul", "Vermelho"],
       especificacoes: {
@@ -145,7 +147,7 @@ const IphoneStore = () => {
         "256GB": { preco: 3800.0, precoAntigo: 3999.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone13promax.webp",
+      imagem: "",
       cores: ["#1a1a1a", "#D4AF37", "#6BB6FF", "#C9E7D4"],
       nomesCores: ["Preto", "Gold", "Azul", "Verde"],
       especificacoes: {
@@ -165,7 +167,7 @@ const IphoneStore = () => {
         "1TB": { preco: 4700.0, precoAntigo: 4900.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone14promax.webp",
+      imagem: "",
       cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
       nomesCores: ["Roxo", "Preto", "Gold"],
       especificacoes: {
@@ -185,7 +187,7 @@ const IphoneStore = () => {
         "1TB": { preco: 4700.0, precoAntigo: 4900.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone14promax.webp",
+      imagem: "",
       cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
       nomesCores: ["Roxo", "Preto", "Gold"],
       especificacoes: {
@@ -205,7 +207,7 @@ const IphoneStore = () => {
         "1TB": { preco: 4700.0, precoAntigo: 4900.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone14promax.webp",
+      imagem: "",
       cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
       nomesCores: ["Roxo", "Preto", "Gold"],
       especificacoes: {
@@ -225,7 +227,7 @@ const IphoneStore = () => {
         "1TB": { preco: 4700.0, precoAntigo: 4900.0 },
       },
       parcelas: 18,
-      imagem: "../public/images/iphones/iphone14promax.webp",
+      imagem: "",
       cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
       nomesCores: ["Roxo", "Preto", "Gold"],
       desconto: 18,
