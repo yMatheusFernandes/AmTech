@@ -1,6 +1,20 @@
 import React, { useState } from "react";
 import IphoneSpecsPopup from "../components/popup";
+import iphone15promax from "../assets/iphone15promax.webp";
 import iphone15pro from "../assets/iphone15pro.webp";
+import iphone15 from "../assets/iphone15.webp";
+import iphone14promax from "../assets/iphone15pro.webp";
+import iphone14pro from "../assets/iphone14pro.webp";
+import iphone14 from "../assets/iphone14.webp";
+import iphone13promax from "../assets/iphone13promax.webp";
+import iphone13pro from "../assets/iphone13pro.webp";
+import iphone13 from "../assets/iphone13.webp";
+import iphone12promax from "../assets/iphone12promax.webp";
+import iphone12pro from "../assets/iphone12pro.webp";
+import iphone12 from "../assets/iphone12.webp";
+import iphone11promax from "../assets/iphone11promax.webp";
+import iphone11 from "../assets/iphone11.webp";
+import iphonexr from "../assets/iphonexr.webp";
 
 import { ShoppingCart, Smartphone, Battery, Camera, Cpu } from "lucide-react";
 
@@ -18,7 +32,7 @@ const IphoneStore = () => {
         "1TB": { preco: 5600.0, precoAntigo: 6000.0 },
       },
       parcelas: 18,
-      imagem: "",
+      imagem: iphone15promax,
       cores: ["#ffffffff", "#F5F5F0", "#000000ff", "#394C6B"],
       nomesCores: [
         "Titânio Branco",
@@ -71,7 +85,7 @@ const IphoneStore = () => {
         "256GB": { preco: 4080.0, precoAntigo: 4249.0 },
       },
       parcelas: 18,
-      imagem: "",
+      imagem: iphone15,
       cores: ["#FFD3E1", "#1a1a1a", "#D4E4FA", "#C9E7D4"],
       nomesCores: ["Rosa", "Preto", "Azul", "Verde"],
       especificacoes: {
@@ -91,7 +105,7 @@ const IphoneStore = () => {
         "1TB": { preco: 4700.0, precoAntigo: 4900.0 },
       },
       parcelas: 18,
-      imagem: "",
+      imagem: iphone14promax,
       cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
       nomesCores: ["Roxo", "Preto", "Gold"],
       especificacoes: {
@@ -110,7 +124,7 @@ const IphoneStore = () => {
         "256GB": { preco: 3950.0, precoAntigo: 4200.0 },
       },
       parcelas: 18,
-      imagem: "",
+      imagem: iphone14pro,
       cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
       nomesCores: ["Roxo", "Preto", "Gold"],
       especificacoes: {
@@ -128,7 +142,7 @@ const IphoneStore = () => {
         "128GB": { preco: 2800.0, precoAntigo: 3100.0 },
       },
       parcelas: 18,
-      imagem: "",
+      imagem: iphone14,
       cores: ["#FFFC9E", "#5C5B77", "#1a1a1a", "#6BB6FF", "#FA3C4E"],
       nomesCores: ["Amarelo ", "Lilás", "Preto", "Azul", "Vermelho"],
       especificacoes: {
@@ -147,9 +161,9 @@ const IphoneStore = () => {
         "256GB": { preco: 3800.0, precoAntigo: 3999.0 },
       },
       parcelas: 18,
-      imagem: "",
-      cores: ["#1a1a1a", "#D4AF37", "#6BB6FF", "#C9E7D4"],
-      nomesCores: ["Preto", "Gold", "Azul", "Verde"],
+      imagem: iphone13promax,
+      cores: ["#1a1a1a", "#D4AF37", "#6BB6FF", "#C9E7D4", "#ffffff"],
+      nomesCores: ["Preto", "Gold", "Azul", "Verde", "Branco"],
       especificacoes: {
         tela: '6.1" Super Retina XDR',
         chip: "A15 Bionic",
@@ -159,85 +173,151 @@ const IphoneStore = () => {
       },
     },
     {
-      id: 4,
-      modelo: "iPhone 14 Pro Max",
+      id: 8,
+      modelo: "Iphone 13 pro",
       precos: {
-        "128GB": { preco: 4350.0, precoAntigo: 4549.0 },
-        "256GB": { preco: 4550.0, precoAntigo: 4700.0 },
-        "1TB": { preco: 4700.0, precoAntigo: 4900.0 },
+        "128GB": { preco: 3180.0, precoAntigo: 3350.0 },
       },
       parcelas: 18,
-      imagem: "",
-      cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
-      nomesCores: ["Roxo", "Preto", "Gold"],
+      imagem: iphone13pro,
+      cores: ["#1a1a1a", "#D4AF37", "#6BB6FF", "#C9E7D4"],
+      nomesCores: ["Preto", "Gold", "Azul", "Verde"],
       especificacoes: {
         tela: '6.1" Super Retina XDR',
         chip: "A15 Bionic",
         camera: "12MP + 12MP",
         bateria: "20h de vídeo",
-        armazenamento: ["128GB", "256GB", "1TB"],
+        armazenamento: ["128GB"],
       },
     },
     {
-      id: 4,
-      modelo: "iPhone 14 Pro Max",
+      id: 9,
+      modelo: "iPhone 13",
       precos: {
-        "128GB": { preco: 4350.0, precoAntigo: 4549.0 },
-        "256GB": { preco: 4550.0, precoAntigo: 4700.0 },
-        "1TB": { preco: 4700.0, precoAntigo: 4900.0 },
+        "128GB": { preco: 2600.0, precoAntigo: 2900.0 },
       },
       parcelas: 18,
-      imagem: "",
-      cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
-      nomesCores: ["Roxo", "Preto", "Gold"],
+      imagem: iphone13,
+      cores: ["#C9E7D4", "#FA3C4E", "#1a1a1a", "#ffffff", "#6BB6FF"],
+      nomesCores: ["Verde", "Vermelho", "Preto", "Branco", "Azul"],
       especificacoes: {
         tela: '6.1" Super Retina XDR',
         chip: "A15 Bionic",
         camera: "12MP + 12MP",
         bateria: "20h de vídeo",
-        armazenamento: ["128GB", "256GB", "1TB"],
+        armazenamento: ["128GB"],
       },
     },
     {
-      id: 4,
-      modelo: "iPhone 14 Pro Max",
+      id: 10,
+      modelo: "iPhone 12 Pro Max",
       precos: {
-        "128GB": { preco: 4350.0, precoAntigo: 4549.0 },
-        "256GB": { preco: 4550.0, precoAntigo: 4700.0 },
-        "1TB": { preco: 4700.0, precoAntigo: 4900.0 },
+        "128GB": { preco: 2950.0, precoAntigo: 3200.0 },
       },
       parcelas: 18,
-      imagem: "",
-      cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
-      nomesCores: ["Roxo", "Preto", "Gold"],
+      imagem: iphone12promax,
+      cores: ["#ffffff", "#1a1a1a", "#D4AF37"],
+      nomesCores: ["Branco", "Preto", "Gold"],
       especificacoes: {
         tela: '6.1" Super Retina XDR',
         chip: "A15 Bionic",
         camera: "12MP + 12MP",
         bateria: "20h de vídeo",
-        armazenamento: ["128GB", "256GB", "1TB"],
+        armazenamento: ["128GB"],
       },
     },
     {
-      id: 4,
-      modelo: "iPhone 14 Pro Max",
+      id: 11,
+      modelo: "iPhone 12 pro",
       precos: {
-        "128GB": { preco: 4350.0, precoAntigo: 4549.0 },
-        "256GB": { preco: 4550.0, precoAntigo: 4700.0 },
-        "1TB": { preco: 4700.0, precoAntigo: 4900.0 },
+        "128GB": { preco: 2450.0, precoAntigo: 2700.0 },
       },
       parcelas: 18,
-      imagem: "",
-      cores: ["#5C5B77", "#1a1a1a", "#D4AF37"],
-      nomesCores: ["Roxo", "Preto", "Gold"],
-      desconto: 18,
+      imagem: iphone12pro,
+      cores: ["#ffffff", "#1a1a1a", "#D4AF37"],
+      nomesCores: ["Branco", "Preto", "Gold"],
       especificacoes: {
         tela: '6.1" Super Retina XDR',
         chip: "A15 Bionic",
         camera: "12MP + 12MP",
         bateria: "20h de vídeo",
-        armazenamento: ["128GB", "256GB", "1TB"],
+        armazenamento: ["128GB"],
       },
+    },
+       {
+      id: 12,
+      modelo: "iPhone 12",
+      precos: {
+        "64GB": { preco: 2030.0, precoAntigo: 2300.0 },
+        "128GB": { preco: 2150.0, precoAntigo: 2350.0 },
+      },
+      parcelas: 18,
+      imagem: iphone12,
+      cores: ["#ffffff", "#1a1a1a", "#C9E7D4","#FA3C4E","#D4E4FA"],
+      nomesCores: ["Branco", "Preto", "Verde", "Vermelho","Azul"],
+      especificacoes: {
+        tela: '6.1" Super Retina XDR',
+        chip: "A15 Bionic",
+        camera: "12MP + 12MP",
+        bateria: "20h de vídeo",
+        armazenamento: ["64GB","128GB"],
+      },
+    },
+       {
+      id: 13,
+      modelo: "iPhone 11 pro max",
+      precos: {
+        "64GB": { preco: 2450.0, precoAntigo: 2700.0 },
+      },
+      parcelas: 18,
+      imagem: iphone11promax,
+      cores: ["#1a1a1a"],
+      nomesCores: [ "Preto"],
+      especificacoes: {
+        tela: '6.1" Super Retina XDR',
+        chip: "A15 Bionic",
+        camera: "12MP + 12MP",
+        bateria: "20h de vídeo",
+        armazenamento: ["64GB"],
+      },
+    },
+       {
+      id: 14,
+      modelo: "iPhone 11",
+      precos: {
+        "128GB": { preco: 1950.0, precoAntigo: 2100.0 },
+        "64GB": { preco: 1850.0, precoAntigo: 2000.0 }
+      },
+      parcelas: 18,
+      imagem: iphone11,
+      cores: ["#ffffff", "#1a1a1a","#5C5B77" ,"#C9E7D4", ],
+      nomesCores: ["Branco", "Preto", "Roxo", "Verde", ],
+      especificacoes: {
+        tela: '6.1" Super Retina XDR',
+        chip: "A15 Bionic",
+        camera: "12MP + 12MP",
+        bateria: "20h de vídeo",
+        armazenamento: ["64GB","128GB"],
+      },
+    },
+       {
+      id: 15,
+      modelo: "iPhone Xr",
+      precos: {
+        "128GB": { preco: 1750.0, precoAntigo: 1900.0 },
+      },
+      parcelas: 18,
+      imagem: iphonexr,
+      cores: [ "#1a1a1a", ],
+      nomesCores: ["Preto", ],
+      especificacoes: {
+        tela: '6.1" Super Retina XDR',
+        chip: "A15 Bionic",
+        camera: "12MP + 12MP",
+        bateria: "20h de vídeo",
+        armazenamento: ["128GB"],
+      },
+ 
     },
   ];
 
@@ -263,8 +343,7 @@ const IphoneStore = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            iPhones SemiNovos <br />
-            sob pedido e a pronta entrega
+            iPhones SemiNovos 
           </h1>
           <p className="text-gray-300 text-lg">
             Os melhores iPhones com condições especiais
