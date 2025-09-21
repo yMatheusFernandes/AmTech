@@ -106,7 +106,7 @@ const AmTechMain = () => {
 
             <button className="group border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-full font-medium text-lg hover:bg-yellow-400 hover:text-blue-900 hover:border-yellow-400 hover:shadow-2xl transform hover:scale-110 hover:-translate-y-2 transition-all duration-200 ease-out flex items-center justify-center" onClick={() => navigate("/Seminovo")}>
               <span className="group-hover:font-semibold transition-all duration-300">
-                Ver Seminovos
+                Ver iPhones Seminovos
               </span>
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" />
             </button>
