@@ -1,13 +1,9 @@
 import {
-  Facebook,
   Instagram,
-  Twitter,
-  Youtube,
   Mail,
   Phone,
   MapPin,
   Clock,
-  ChevronRight,
   ShoppingBag,
   Headphones,
   Shield,
@@ -21,7 +17,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-white">
-      {/* Seção de Benefícios */}
       <div className="border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -59,10 +54,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Conteúdo Principal */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Sobre a Empresa */}
           <div>
             <h3
               className="text-2xl font-bold mb-4"
@@ -84,7 +77,7 @@ const Footer = () => {
                 <FaWhatsapp size={24} color="#ffffff" />
               </a>
               <a
-                href="https://instagram.com/amtech_piripiri"
+                href="https://instagram.com/lojaamtechoficial"
                 className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                 style={{ backgroundColor: "#003BA5" }}
                 aria-label="Instagram"
@@ -110,7 +103,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Rápidos */}
           <div>
             <h3
               className="text-lg font-semibold mb-4"
@@ -133,7 +125,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Atendimento */}
           <div>
             <h3
               className="text-lg font-semibold mb-4"
@@ -160,7 +151,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contato */}
           <div>
             <h3
               className="text-lg font-semibold mb-4"
@@ -204,7 +194,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">

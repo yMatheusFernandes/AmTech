@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import Main from "../components/Main"
 import Footer from "../components/Footer"
 import logo from "../images/logo.png";

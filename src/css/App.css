@@ -20,7 +20,6 @@
   flex-direction: column;
 }
 
-/* Header */
 .header {
   background: #003ba5;
   color: white;
@@ -35,7 +34,6 @@
   text-align: center;
 }
 
-/* Espaço da logo */
 .header .logo {
   display: flex;
   align-items: center;
@@ -43,13 +41,11 @@
 }
 
 .header .logo img {
-  height: 100px; /* ajuste conforme o tamanho da logo */
+  height: 100px; 
   width: auto;
-  border-radius: 8px; /* opcional, remove se quiser a logo normal */
-  
+  border-radius: 8px;
 }
 
-/* Texto da loja */
 .header .title {
   text-align: right;
 }
@@ -65,7 +61,6 @@
   margin: 4px 0 0;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;

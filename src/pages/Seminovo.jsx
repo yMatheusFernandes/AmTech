@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import IphoneSpecsPopup from "../components/popup";
 import iphone17promax from "../assets/iphone17promax.webp";
 import iphone17pro from "../assets/iphone17pro.webp";
-// import iphone17 from "../assets/iphone17.webp";
 import iphone16promax from "../assets/iphone16promax.webp";
 import iphone16pro from "../assets/iphone16pro.webp";
-import iphone16plus from "../assets/iphone16plus.webp";
 import iphone16 from "../assets/iphone16.webp";
 import iphone15promax from "../assets/iphone15promax.webp";
 import iphone15pro from "../assets/iphone15pro.webp";
@@ -18,13 +16,8 @@ import iphone13pro from "../assets/iphone13pro.webp";
 import iphone13 from "../assets/iphone13.webp";
 import iphone12promax from "../assets/iphone12promax.webp";
 import iphone12pro from "../assets/iphone12pro.webp";
-import iphone12 from "../assets/iphone12.webp";
-// import iphone11promax from "../assets/iphone11promax.webp";
-import iphone11pro from "../assets/iphone11pro.webp";
-import iphone11 from "../assets/iphone11.webp";
-// import iphonexr from "../assets/iphonexr.webp";
 
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, ShieldCheck, Gift } from "lucide-react";
 
 const IphoneStore = () => {
   const [selectedColors, setSelectedColors] = useState({});
@@ -35,8 +28,7 @@ const IphoneStore = () => {
       id: 1,
       modelo: "iPhone 17 Pro Max",
       precos: {
-        "512GB": { preco: 10250.0, precoAntigo: 11000.0 },
-        "1TB": { preco: 11050.0, precoAntigo: 12000.0 },
+        "1TB": { preco: 12400.0, precoAntigo: 12400.0 },
       },
       parcelas: 18,
       imagem: iphone17promax,
@@ -51,16 +43,15 @@ const IphoneStore = () => {
         chip: "A19 Pro",
         camera: "48MP + 48MP + 48MP",
         bateria: "33h de vídeo",
-        armazenamento: ["512GB", "1TB"],
+        armazenamento: ["1TB"],
       },
     },
     {
       id: 2,
       modelo: "iPhone 17 Pro",
       precos: {
-        "256GB": { preco: 8650.0, precoAntigo: 9250.0 },
-        "512GB": { preco: 9250.0, precoAntigo: 9500.0 },
-        "1TB": { preco: 9950.0, precoAntigo: 10500.0 },
+        "512GB": { preco: 8700.0, precoAntigo: 9500.0 },
+        "1TB": { preco: 9800.0, precoAntigo: 10500.0 },
       },
       parcelas: 18,
       imagem: iphone17pro,
@@ -75,40 +66,14 @@ const IphoneStore = () => {
         chip: "A19 Pro",
         camera: "48MP + 48MP + 48MP",
         bateria: "31h de vídeo",
-        armazenamento: ["256GB", "512GB", "1TB"],
+        armazenamento: ["512GB", "1TB"],
       },
     },
-    // {
-    //   id: 3,
-    //   modelo: "iPhone 17",
-    //   precos: {
-    //     "256GB": { preco: 5450.0, precoAntigo: 5060.0 },
-    //     "512GB": { preco: 5600.0, precoAntigo: 6000.0 },
-    //   },
-    //   parcelas: 18,
-    //   imagem: iphone17,
-    //   cores: ["#ffffffff", "#F5F5F0", "#000000ff", "#394C6B"],
-    //   nomesCores: [
-    //     "Titânio Branco",
-    //     "Titânio Natural",
-    //     "Titânio Preto",
-    //     "Titânio Azul",
-    //   ],
-    //   especificacoes: {
-    //     tela: '6.3" Super Retina XDR OLED',
-    //     chip: "A19",
-    //     camera: "48MP + 48MP",
-    //     bateria: "30h de vídeo",
-    //     armazenamento: ["256GB", "512GB"],
-    //   },
-    // },
     {
-      id: 4,
+      id: 3,
       modelo: "iPhone 16 Pro Max",
       precos: {
-        "256GB": { preco: 6580.0, precoAntigo: 6500.0 },
-        "512GB": { preco: 6850.0, precoAntigo: 7100.0 },
-        "1TB": { preco: 7000.0, precoAntigo: 7250.0 },
+        "256GB": { preco: 5680.0, precoAntigo: 6500.0 },
       },
       parcelas: 18,
       imagem: iphone16promax,
@@ -124,16 +89,16 @@ const IphoneStore = () => {
         chip: "A18 Pro",
         camera: "48MP + 12MP + 12MP",
         bateria: "29h de vídeo",
-        armazenamento: ["256GB", "512GB", "1TB"],
+        armazenamento: ["256GB"],
       },
     },
     {
-      id: 5,
+      id: 4,
       modelo: "iPhone 16 Pro",
       precos: {
-        "128GB": { preco: 5450.0, precoAntigo: 5700.0 },
-        "256GB": { preco: 5800.0, precoAntigo: 6000.0 },
-        "512GB": { preco: 5950.0, precoAntigo: 6100.0 }
+        "128GB": { preco: 5100.0, precoAntigo: 5700.0 },
+        "256GB": { preco: 5480.0, precoAntigo: 6000.0 },
+        "512GB": { preco: 5700.0, precoAntigo: 6100.0 }
       },
       parcelas: 18,
       imagem: iphone16pro,
@@ -153,35 +118,10 @@ const IphoneStore = () => {
       },
     },
     {
-      id: 6,
-      modelo: "iPhone 16 plus",
-      precos: {
-        "128GB": { preco: 4800.0, precoAntigo: 5000.0 },
-        "256GB": { preco: 5000.0, precoAntigo: 5200.0 },
-        "512GB": { preco: 5150.0, precoAntigo: 5500.0 },
-      },
-      parcelas: 18,
-      imagem: iphone16plus,
-      cores: ["#ffffffff", "#F5F5F0", "#000000ff", "#394C6B"],
-      nomesCores: [
-        "Titânio Branco",
-        "Titânio Natural",
-        "Titânio Preto",
-        "Titânio Azul",
-      ],
-      especificacoes: {
-        tela: '6.7" Super Retina XDR OLED',
-        chip: "A18",
-        camera: "48MP + 12MP",
-        bateria: "30h de vídeo",
-        armazenamento: ["128GB", "256GB", "512GB"],
-      },
-    },
-    {
-      id: 7,
+      id: 5,
       modelo: "iPhone 16",
       precos: {
-        "128GB": { preco: 4570.0, precoAntigo: 5060.0 },
+        "128GB": { preco: 4300.0, precoAntigo: 5060.0 },
       },
       parcelas: 18,
       imagem: iphone16,
@@ -201,12 +141,11 @@ const IphoneStore = () => {
       },
     },
     {
-      id: 8,
+      id: 6,
       modelo: "iPhone 15 Pro Max",
       precos: {
-        "256GB": { preco: 5150.0, precoAntigo: 5060.0 },
-        "512GB": { preco: 5350.0, precoAntigo: 5500.0 },
-        "1TB": { preco: 5700.0, precoAntigo: 5900.0 },
+        "256GB": { preco: 4680.0, precoAntigo: 5060.0 },
+        "512GB": { preco: 5060.0, precoAntigo: 5500.0 },
       },
       parcelas: 18,
       imagem: iphone15promax,
@@ -222,17 +161,15 @@ const IphoneStore = () => {
         chip: "A17 Pro",
         camera: "48MP + 12MP + 12MP",
         bateria: "29h de vídeo",
-        armazenamento: ["256GB", "512GB", "1TB"],
+        armazenamento: ["256GB", "512GB"],
       },
     },
     {
-      id: 9,
+      id: 7,
       modelo: "iPhone 15 Pro",
       precos: {
-        "128GB": { preco: 4380.0, precoAntigo: 4500.0 },
-        "256GB": { preco: 4700.0, precoAntigo: 4900.0 },
-        "512GB": { preco: 4750.0, precoAntigo: 5000.0 },
-        "1TB": { preco: 4900.0, precoAntigo: 5100.0 },
+        "128GB": { preco: 4100.0, precoAntigo: 4500.0 },
+        "256GB": { preco: 4200.0, precoAntigo: 4900.0 },
       },
       parcelas: 18,
       imagem: iphone15pro,
@@ -248,14 +185,16 @@ const IphoneStore = () => {
         chip: "A17 Pro",
         camera: "48MP + 12MP + 12MP",
         bateria: "23h de vídeo",
-        armazenamento: ["128GB", "256GB", "512GB", "1TB"],
+        armazenamento: ["128GB", "256GB"],
       },
     },
     {
-      id: 10,
+      id: 8,
       modelo: "iPhone 15",
       precos: {
-        "128GB": { preco: 3550.0, precoAntigo: 3950.0 },
+        "128GB": { preco: 3400.0, precoAntigo: 3950.0 },
+        "256GB": { preco: 4000.0, precoAntigo: 3950.0 },
+        "512GB": { preco: 4200.0, precoAntigo: 3950.0 },
       },
       parcelas: 18,
       imagem: iphone15,
@@ -266,15 +205,15 @@ const IphoneStore = () => {
         chip: "A16 Bionic",
         camera: "48MP + 12MP",
         bateria: "20h de vídeo",
-        armazenamento: ["128GB"],
+        armazenamento: ["128GB", "256GB", "512GB"],
       },
     },
     {
-      id: 11,
+      id: 9,
       modelo: "iPhone 14 Pro Max",
       precos: {
-        "128GB": { preco: 4100.0, precoAntigo: 4349.0 },
-        "256GB": { preco: 4350.0, precoAntigo: 4550.0 },
+        "128GB": { preco: 3800.0, precoAntigo: 4349.0 },
+        "256GB": { preco: 3980.0, precoAntigo: 4550.0 },
       },
       parcelas: 18,
       imagem: iphone14promax,
@@ -289,11 +228,10 @@ const IphoneStore = () => {
       },
     },
     {
-      id: 12,
+      id: 10,
       modelo: "iPhone 14 Pro",
       precos: {
-        "128GB": { preco: 3550.0, precoAntigo: 3800.0 },
-        "256GB": { preco: 3750.0, precoAntigo: 4000.0 },
+        "128GB": { preco: 3330.0, precoAntigo: 3800.0 },
       },
       parcelas: 18,
       imagem: iphone14pro,
@@ -304,14 +242,14 @@ const IphoneStore = () => {
         chip: "A15 Bionic",
         camera: "12MP + 12MP",
         bateria: "26h de vídeo",
-        armazenamento: ["128GB", "256GB"],
+        armazenamento: ["128GB"],
       },
     },
     {
-      id: 13,
+      id: 11,
       modelo: "iPhone 14",
       precos: {
-        "128GB": { preco: 2800.0, precoAntigo: 3100.0 },
+        "128GB": { preco: 2680.0, precoAntigo: 3100.0 },
       },
       parcelas: 18,
       imagem: iphone14,
@@ -326,7 +264,7 @@ const IphoneStore = () => {
       },
     },
     {
-      id: 14,
+      id: 12,
       modelo: "iPhone 13 Pro Max",
       precos: {
         "128GB": { preco: 3400.0, precoAntigo: 3559.0 },
@@ -344,10 +282,10 @@ const IphoneStore = () => {
       },
     },
     {
-      id: 15,
+      id: 13,
       modelo: "Iphone 13 pro",
       precos: {
-        "128GB": { preco: 3100.0, precoAntigo: 3250.0 },
+        "128GB": { preco: 2980.0, precoAntigo: 3250.0 },
       },
       parcelas: 18,
       imagem: iphone13pro,
@@ -362,11 +300,11 @@ const IphoneStore = () => {
       },
     },
     {
-      id: 16,
+      id: 14,
       modelo: "iPhone 13",
       precos: {
-        "128GB": { preco: 2550.0, precoAntigo: 2650.0 },
-        "256GB": { preco: 2750.0, precoAntigo: 2900.0 },
+        "128GB": { preco: 2580.0, precoAntigo: 2650.0 },
+        "256GB": { preco: 2680.0, precoAntigo: 2900.0 },
       },
       parcelas: 18,
       imagem: iphone13,
@@ -381,10 +319,10 @@ const IphoneStore = () => {
       },
     },
     {
-      id: 17,
+      id: 15,
       modelo: "iPhone 12 Pro Max",
       precos: {
-        "128GB": { preco: 2900.0, precoAntigo: 3000.0 },
+        "128GB": { preco: 2800.0, precoAntigo: 3000.0 },
       },
       parcelas: 18,
       imagem: iphone12promax,
@@ -399,10 +337,11 @@ const IphoneStore = () => {
       },
     },
     {
-      id: 18,
+      id: 16,
       modelo: "iPhone 12 pro",
       precos: {
-        "128GB": { preco: 2550.0, precoAntigo: 2700.0 },
+        "128GB": { preco: 2500.0, precoAntigo: 2700.0 },
+        "256GB": { preco: 2580.0, precoAntigo: 2700.0 },
       },
       parcelas: 18,
       imagem: iphone12pro,
@@ -413,82 +352,10 @@ const IphoneStore = () => {
         chip: "A15 Bionic",
         camera: "12MP + 12MP",
         bateria: "20h de vídeo",
-        armazenamento: ["128GB"],
+        armazenamento: ["128GB", "256GB"],
       },
     },
-    {
-      id: 19,
-      modelo: "iPhone 12",
-      precos: {
-        "128GB": { preco: 2100.0, precoAntigo: 2350.0 },
-      },
-      parcelas: 18,
-      imagem: iphone12,
-      cores: ["#ffffff", "#1a1a1a", "#C9E7D4", "#FA3C4E", "#D4E4FA"],
-      nomesCores: ["Branco", "Preto", "Verde", "Vermelho", "Azul"],
-      especificacoes: {
-        tela: '6.1" Super Retina XDR',
-        chip: "A15 Bionic",
-        camera: "12MP + 12MP",
-        bateria: "20h de vídeo",
-        armazenamento: ["128GB"],
-      },
-    },
-    {
-      id: 20,
-      modelo: "iPhone 11 pro",
-      precos: {
-        "64GB": { preco: 2150.0, precoAntigo: 2450.0 },
-        "256GB": { preco: 2450.0, precoAntigo: 2700.0 }
-      },
-      parcelas: 18,
-      imagem: iphone11pro,
-      cores: ["#1a1a1a"],
-      nomesCores: ["Preto"],
-      especificacoes: {
-        tela: '5.8" Super Retina XDR',
-        chip: "A13 Bionic",
-        camera: "12MP + 12MP + 12MP",
-        bateria: "18h de vídeo",
-        armazenamento: ["64GB", "256GB"],
-      },
-    },
-    {
-      id: 21,
-      modelo: "iPhone 11",
-      precos: {
-        "128GB": { preco: 1950.0, precoAntigo: 2100.0 },
-      },
-      parcelas: 18,
-      imagem: iphone11,
-      cores: ["#ffffff", "#1a1a1a", "#5C5B77", "#C9E7D4"],
-      nomesCores: ["Branco", "Preto", "Roxo", "Verde"],
-      especificacoes: {
-        tela: '6.1" Super Retina XDR',
-        chip: "A15 Bionic",
-        camera: "12MP + 12MP",
-        bateria: "20h de vídeo",
-        armazenamento: ["128GB"],
-      },
-    },
-    // {
-    //   id: 22,
-    //   modelo: "iPhone Xr",
-    //   precos: {
-    //     "128GB": { preco: 1750.0, precoAntigo: 1900.0 },
-    //   },
-    //   parcelas: 18,
-    //   imagem: iphonexr,
-    //   cores: ["#1a1a1a"],
-    //   nomesCores: ["Preto"],
-    //   especificacoes: {
-    //     tela: '6.1" Super Retina XDR',
-    //     chip: "A15 Bionic",
-    //     camera: "12MP + 12MP",
-    //     bateria: "20h de vídeo",
-    //     armazenamento: ["128GB"],
-    //   },
-    // },
+
   ];
 
   const handleColorSelect = (phoneId, colorIndex) => {
@@ -515,11 +382,24 @@ const IphoneStore = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
             iPhones SemiNovos
           </h1>
-          <p className="text-gray-300 text-lg">
-            Todos os iphones desta aba acompanham 6 meses de garantia da loja{" "}
-            <br />
-            mais capa pelicula e cabo como brinde da loja
-          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+            <div className="flex items-center gap-2 px-6 py-3 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-[#ffc700]/30 shadow-lg shadow-[#ffc700]/10">
+              <ShieldCheck size={24} className="text-[#ffc700]" />
+              <div className="text-left">
+                <p className="text-white font-bold leading-none italic">3 Meses de Garantia</p>
+                <p className="text-gray-400 text-xs mt-1">Garantia AmTech</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-2 px-6 py-3 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-blue-400/30 shadow-lg shadow-blue-400/10">
+              <Gift size={24} className="text-blue-400" />
+              <div className="text-left">
+                <p className="text-white font-bold leading-none">Brindes Exclusivos</p>
+                <p className="text-gray-400 text-xs mt-1">Capa + Película + Cabo</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 md:gap-8">
@@ -538,7 +418,6 @@ const IphoneStore = () => {
                 key={iphone.id}
                 className="group relative flex flex-col sm:flex-row bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg rounded-3xl overflow-hidden border border-gray-700/50 hover:border-[#ffc700] transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#ffc700]/50"
               >
-                {/* Imagem */}
                 <div className="relative w-full sm:w-1/2 h-48 sm:h-auto bg-gradient-to-br from-[#ffffff] to-[#ffffff] p-6 flex items-center justify-center">
                   <img
                     src={iphone.imagem}
@@ -546,7 +425,6 @@ const IphoneStore = () => {
                     className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-700"
                   />
 
-                  {/* Menu de cores sobreposto no mobile */}
                   <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 md:hidden">
                     {iphone.cores.map((cor, index) => (
                       <button
@@ -569,7 +447,6 @@ const IphoneStore = () => {
                     {iphone.modelo}
                   </h3>
 
-                  {/* Menu de cores abaixo da imagem no desktop */}
                   <div className="hidden md:block mb-4">
                     <p className="text-sm text-gray-400 mb-2">
                       Cores disponíveis:
@@ -594,10 +471,8 @@ const IphoneStore = () => {
                     </p>
                   </div>
 
-                  {/* Pop up das especificações */}
                   <IphoneSpecsPopup iphone={iphone} />
 
-                  {/* Seleção de armazenamento */}
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-2">Armazenamento:</p>
                     <div className="flex gap-2 flex-wrap">
@@ -622,7 +497,6 @@ const IphoneStore = () => {
                     </p>
                   </div>
 
-                  {/* Preço */}
                   <div className="mb-6">
                     {precoAntigoAtual && (
                       <p className="text-gray-500 line-through text-sm">
@@ -633,14 +507,11 @@ const IphoneStore = () => {
                       {formatPrice(precoAtual)}
                     </p>
 
-                    {/* Parcela de preços
                     <p className="text-sm text-gray-400">
-                      em até {iphone.parcelas}x de {formatPrice(precoAtual / iphone.parcelas)}
+                      em até {iphone.parcelas}x 
                     </p>
-                    */}
                   </div>
 
-                  {/* Botão WhatsApp */}
                   <a
                     href="https://wa.me/5586981634623"
                     target="_blank"
